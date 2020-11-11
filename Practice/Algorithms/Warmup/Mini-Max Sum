@@ -1,0 +1,14 @@
+import math
+import os
+import random
+import re
+import sys
+from itertools import combinations
+
+# Complete the miniMaxSum function below.
+def miniMaxSum(arr):
+    cob_list = combinations(arr, 4)
+    
+    sum_list = [ sum(num) for num in cob_list]
+    
+    print(min(sum_list),max(sum_list))
