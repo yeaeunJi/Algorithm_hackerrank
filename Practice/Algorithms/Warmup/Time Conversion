@@ -1,0 +1,21 @@
+def timeConversion(s):
+    answer = ''
+    
+    # s = 07:05:45PM
+    # s[-2:] : PM이면 앞의 값에 12 더하고
+    # s[-2:] : AM이면 그대로이되 12인 경우 24로 변경
+    time_flag = s[-2:] # AM or PM
+    new_time_str = s[2:8] # :05:45 까지만 추출
+    
+    before_hour = int(s[:2]) # 변경 전 hour 값을 숫자로 변환
+    
+    if time_flag == 'PM' and before_hour < 12  : # 만약 오후 12시보다 작을 경우 
+        new_time_str = str(before_hour+12) + new_time_str
+    elif time_flag == 'AM' and before_hour == 12: # 오전 12시인 경우
+        new_time_str = '00' + new_time_str
+    else :
+        new_time_str = s[:8] # 변경이 필요하지 않은 경우에는 뒤에 AM/PM만 제거하고 반환
+    
+    answer = new_time_str
+        
+    return answer
