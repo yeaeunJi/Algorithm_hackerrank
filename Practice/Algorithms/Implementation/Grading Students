@@ -1,0 +1,12 @@
+def gradingStudents(grades):
+    answer = []
+    
+    for grade in grades :
+        dif_val = 5 - grade%5 # 가장 가까우면서 grade보다 큰 5의 배수와 현재 값의 차
+        next_five_mul = grade + dif_val # 가장 가까우면서 grade보다 큰 5의 배수
+        
+        if dif_val < 3 and next_five_mul >= 40:
+            answer.append(next_five_mul)
+        else : 
+            answer.append(grade)
+    return answer
