@@ -1,0 +1,9 @@
+def countApplesAndOranges(s, t, a, b, apples, oranges):
+    apples_point = [ a+apple for apple in apples]  # 사과가 떨어져 있는 위치 배열
+    apples_in_house = [ apple for apple in apples_point if apple >= s and apple <= t  ]
+    
+    oranges_point = [b+orange for orange in oranges]  # 오렌지가 떨어져 있는 위치 배열
+    oranges_in_house = [ orange for orange in oranges_point if orange >= s and orange <= t  ]
+
+    print(len(apples_in_house))
+    print(len(oranges_in_house))
