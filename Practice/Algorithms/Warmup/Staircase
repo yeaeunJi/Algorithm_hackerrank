@@ -1,0 +1,5 @@
+# Complete the staircase function below.
+def staircase(n):
+
+    for row in range(n) :
+        print('{}{}'.format(' ' * (n-(row+1)),'#'*(row+1)) )
