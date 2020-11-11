@@ -1,0 +1,14 @@
+import math
+import os
+import random
+import re
+import sys
+
+# Complete the camelcase function below.
+def camelcase(s):
+    answer = 0    
+    
+    uppers = re.findall('[A-Z]', s) # 정규 표현식을 사용하여 대문자들을 찾아 리스트로 반환
+    answer = len(uppers)+1 # 첫단어는 소문자이므로 +1
+    
+    return answer
