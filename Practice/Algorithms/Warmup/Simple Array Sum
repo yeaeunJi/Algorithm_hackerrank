@@ -1,0 +1,7 @@
+def simpleArraySum(ar):
+    answer = 0
+    
+    for num in ar :
+        answer += num
+        
+    return answer
