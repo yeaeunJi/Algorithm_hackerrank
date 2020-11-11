@@ -1,0 +1,19 @@
+def diagonalDifference(arr):
+    # Write your code here
+    # print(arr)
+    answer = 0
+    
+    first_sum = 0
+    second_sum = 0
+    length = len(arr)
+    
+    for i in range(len(arr)) :
+        first_sum += arr[i][i]
+        # print(first_sum)
+        second_sum += arr[i][-(i+1)]
+        # print(second_sum)
+    
+    # print(first_sum)
+    answer = abs(first_sum - second_sum)
+          
+    return answer
