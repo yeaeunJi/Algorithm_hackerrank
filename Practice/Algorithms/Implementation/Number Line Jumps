@@ -1,0 +1,15 @@
+def kangaroo(x1, v1, x2, v2):
+    # 일차 방정식의 해가 존재한다면 'YES' 해가 존재하지 않는다면 'NO'를 반환
+    if v1 == v2:
+        if x1 == x2:
+            return 'YES'
+        else:
+            return 'NO'
+    else: 
+        div_val = divmod(x2-x1, v1-v2)
+        
+        if div_val[0] >= 0 and div_val[1] == 0 : 
+            return 'YES'
+        else :
+            return 'NO'
+                return 'NO'
