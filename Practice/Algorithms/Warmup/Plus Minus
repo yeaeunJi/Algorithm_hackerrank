@@ -1,0 +1,27 @@
+# Complete the plusMinus function below.
+def plusMinus(arr):
+    answer = []
+    # print(arr)  
+      
+    length = len(arr) # length of array
+    # print(length)
+    ps_cnt = 0
+    ng_cnt = 0
+    z_cnt = 0
+    
+    # check the  number whether it is positive or negative or zero
+    for num in arr :
+        if num > 0 :
+            ps_cnt += 1
+        elif num == 0 :
+            z_cnt += 1
+        else :
+            ng_cnt += 1
+            
+    ps_ratio = round(ps_cnt / length, 6)
+    ng_ratio = round(ng_cnt / length, 6)
+    z_ratio = round(z_cnt / length, 6)
+            
+    print(ps_ratio)    
+    print(ng_ratio)
+    print(z_ratio)
